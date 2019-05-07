@@ -11,19 +11,19 @@ object bumblebee {
 	method transformar() { transformadoEnAuto = not transformadoEnAuto }
 }
 object paqueteDeLadrillos{
-	var cant
-	method cantidad(num){cant=num}
-	method peso(){return 2*cant}
+	var property cant=0
+	const pesoUnitario=2
+	method peso(){return pesoUnitario*cant}
 	method nivelPeligrosidad(){return 2}
 	
 }
 object arenaAGranel{
-	var peso
-	method peso(num){peso=num}
+	var property peso=0
 	method nivelPeligrosidad(){return 1}
+	method bulto(){return 1}
 }
 object bateriaAntiaerea{
-	var tieneMisiles=true
+	var property tieneMisiles=true
 	method peso(){if(tieneMisiles){return 300}
 		else{return 200}
 	}
